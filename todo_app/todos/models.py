@@ -1,5 +1,5 @@
 from django.db import models
-# from .serializers import TodoSerializer
+from .serializers import TodoSerializer
 
 
 class Todo(models.Model):
@@ -16,6 +16,6 @@ class Todo(models.Model):
         self.author = ''
         super(Todo, self).save(*args, **kwargs)
     
-    # @property
-    # def data(self):
-    #     return TodoSerializer(self).data
+    @property
+    def data(self):
+        return TodoSerializer(self).data
