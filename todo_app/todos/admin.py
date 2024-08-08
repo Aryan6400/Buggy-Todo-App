@@ -4,8 +4,8 @@ from .models import Todo
 
 
 class TodoAdmin(admin.ModelAdmin):
-    list_display = ('id', 'creator', 'title', 'body', 'created_at', 'updated_at')
-    ordering = ('-updated_At',)
+    list_display = ('id', 'author', 'title', 'body', 'created_at', 'updated_at')
+    ordering = ('-updated_at',)
     readonly_fields = ('created_at', 'updated_at')
 
 
